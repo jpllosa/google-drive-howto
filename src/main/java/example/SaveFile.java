@@ -58,7 +58,7 @@ public class SaveFile {
 		File fileMetadata = new File();
         fileMetadata.setTitle("howToSave.txt");
         
-        File googleDriveFile = driveService.files().create(fileMetadata, 
+        File googleDriveFile = driveService.files().insert(fileMetadata, 
         		new InputStreamContent("", new FileInputStream("howToSave.txt")))
                 .setFields("id")
                 .execute();
