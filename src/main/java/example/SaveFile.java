@@ -20,6 +20,11 @@ import com.google.api.services.drive.Drive;
 import com.google.api.services.drive.DriveScopes;
 import com.google.api.services.drive.model.File;
 
+/**
+ * 
+ * @author Joel Patrick Llosa
+ *
+ */
 public class SaveFile {
 
 	// to run: java username appName
