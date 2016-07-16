@@ -1,4 +1,4 @@
-# Google Drive, How to save, write, and read files
+# Google Drive: How to save, write, and read files
 How to Save and Read a file to/from Google Drive by Joel Patrick Llosa
 
 to run: `java username app-name`
