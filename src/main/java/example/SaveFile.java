@@ -50,7 +50,6 @@ public class SaveFile {
         // authorize(userId)
         Credential credential = new AuthorizationCodeInstalledApp(flow, new LocalServerReceiver()).authorize(args[0]);
         // Credentials saved to credentialsFolder
-    
 		
 		Drive driveService = new Drive.Builder(httpTransport, jsonFactory, credential)
                 .setApplicationName(args[1])
