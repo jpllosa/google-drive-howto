@@ -24,6 +24,7 @@ import com.google.api.services.drive.model.File;
 
 public class SaveFile {
 
+	// to run: java username appName
 	public static void main(String[] args) throws Exception {
 		// read and write scope
 		List<String> SCOPES = Arrays.asList(DriveScopes.DRIVE_READONLY,  DriveScopes.DRIVE_FILE);
@@ -32,6 +33,7 @@ public class SaveFile {
 		HttpTransport httpTransport = GoogleNetHttpTransport.newTrustedTransport();
 		
 		// credentials will be in the credentials directory
+		// once you have stored credential, no need to log in
 		FileDataStoreFactory fileDataStoreFactory = new FileDataStoreFactory(new java.io.File("credentials"));
         
         // Load client secrets.
@@ -64,6 +66,8 @@ public class SaveFile {
                 .execute();
         if (googleDriveFile == null) {
             throw new Exception("Unable to write file");
+        } else {
+        	System.out.println("file saved...");
         }
 		
 		
