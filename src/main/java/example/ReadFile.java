@@ -60,24 +60,24 @@ public class ReadFile {
 		List<File> files = result.getItems();
 		String fileId = null;
 		for (File file : files) {
-            if (file.getTitle().equals("howToSave.txt")) {
-                fileId = file.getId();
-                break;
-            }
-        }
-		
+			if (file.getTitle().equals("howToSave.txt")) {
+				fileId = file.getId();
+				break;
+			}
+		}
+
 		if (fileId != null) {
 			InputStream is = driveService.files().get(fileId).executeMediaAsInputStream();
 			int data;
 			while ((data = is.read()) >= 0) {
-				System.out.print((char)data);
+				System.out.print((char) data);
 			}
 			System.out.println("end of file reached");
 			is.close();
 		} else {
 			System.out.println("file not found...");
 		}
-		
+
 		httpTransport.shutdown();
 	}
 }
